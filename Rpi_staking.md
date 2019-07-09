@@ -1,4 +1,5 @@
 Model: Raspberry Pi 3+
+
 OS: ubuntu-mate-18.04.2
 
 The first thing we need to do is load the OS onto our SD card. Get Ubuntu Mate [from here](https://ubuntu-mate.org/raspberry-pi/)
