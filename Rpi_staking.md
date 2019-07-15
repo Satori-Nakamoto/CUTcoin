@@ -51,7 +51,8 @@ And now we have to wait to synch the blockchain. This also takes a long time. Af
 
     ./cutcoin-wallet-cli
     
-Now we can create our cutcoin wallet, get our coins, and let them age for 800 blocks (approx 26 hours) before we can stake.
+in the new terminal tab. From this point on we will be working in the new terminal window.
+We can now create our cutcoin wallet, get our coins, and let them age for 800 blocks (approx 26 hours) before we can stake.
 In order to stake most efficiently, we should break up our stash of CUTcoin into groups of 1/10/100/1000. This can be done by 
 generating new subaddresses with
 
