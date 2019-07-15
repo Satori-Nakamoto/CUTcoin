@@ -42,12 +42,12 @@ Finally we are ready to clone the repository and build CUTcoin!
     git checkout master
     make
     
-Building takes about 12 hours. After it's build, we can navigate to the CUTcoin folder and launch the daemon with
+Building takes about 12 hours. After it's built, we can navigate to the CUTcoin folder and launch the daemon with
 
     cd /home/pi/cutcoin/build/Linux/master/release/bin
     ./cutcoind
     
-And now we have to wait to synch the blockchain. This also takes a long time. After it's ready, open a new tab with ´shift + control + t´ and do
+And now we have to wait to synch the blockchain. This also takes a long time. After it's ready, open a new tab with `shift + control + t` and do
 
     ./cutcoin-wallet-cli
     
@@ -59,11 +59,12 @@ generating new subaddresses with
 
 and sending coins to the new address. For example, if I have 1321 CUT then I would generate 7 new addresses and send 1000 CUT to
  address 1, 100 CUT to address 2, 100 CUT to address 3, 100 CUT to address 4, 10 CUT to address 5, 10 CUT to address 6 and 1 CUT
- to address 7. The transaction would look something like this:
+ to address 7 (1000 + 100 + 100 + 100 + 10 + 10 + 1 = 1321). The transaction would look something like this:
  
     transfer address_1 1000 address_2 100 address_3 100 address_4 100 address_5 10 address_6 10 address_7 1
  
 An in depth CLI wallet guide can be [found here](https://github.com/masari-project/Masari-Marketing/blob/master/Tutorials/CLI-wallet/CLI-wallet-guide.md).
+
 Now we have to wait those 800 blocks, and then we can start staking with 
 
     start_staking
