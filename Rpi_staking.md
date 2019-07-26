@@ -27,15 +27,19 @@ You can verify that it worked by doing
 
     swapon -s
     
-Next we will build the libgtest-dev library binary with
-
-    sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cmake . && sudo make && sudo mv libg* /usr/lib/
-    
-And then install the dependencies with
+First we will install the dependencies with
 
     sudo apt update && sudo apt install build-essential cmake pkg-config libboost-all-dev libssl-dev libzmq3-dev libunbound-dev libsodium-dev libunwind8-dev liblzma-dev libreadline6-dev libldns-dev libexpat1-dev doxygen graphviz libpgm-dev
     
-Finally we are ready to clone the repository and build CUTcoin!
+And then we will build the libgtest-dev library binary with
+
+    sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cmake . && sudo make && sudo mv libg* /usr/lib/
+    
+After we return to the home folder with
+
+    cd ~
+    
+we are finally ready to clone the repository and build CUTcoin!
 
     git clone --recursive https://github.com/cutcoin/cutcoin
     cd cutcoin
