@@ -48,5 +48,15 @@ To bypass the main circuit output check, you can use a pin that is not yet verif
 
 So, resuming all we can sure you, that we made researches for this issues and in our PoS code there would be no such issues. [Our POS can be found here.](https://www.reddit.com/user/CUTcoin/comments/aumb8b/cutcoins_proof_of_stake_implementation/)
 
+11/ Quote from: D1f1c0lt 
+Why did you decide to switch to PoS from PoW? Just for the sake of ecology and prevention of 51% attack? 
+Anyway, you probably know about the drawback of PoS i.e. richer get richer since they possess the most stakes. 
+Don't you think it is something unfair though?
+Thanks for reply
+
+Sustainability against 51% attack itself is good enough prize to fight for, isn't it? If somebody (or some group) hols 51%+ of mining power that not only able to perform multiple spending but also can change blockchain history on their behalf. In PoS it is unlikely that a person that holds 51%+ of coins being on stake would try to perform malicious manipulations as it evolves in a dramatic decrease of the coin market price.
+
+In CUTcoin  PoS, the probability to obtain a reword is proportional to the number of coins being on stake, so it's not 'richer get richer' in the long term. In the short term, it's clear that the block forging is subject to change and those who put on a stake not much and still forge a block can easily double their CUTcoins.
+
 
 
