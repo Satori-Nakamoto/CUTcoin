@@ -24,7 +24,7 @@ First of all, CUT coin is about anonymity. Second, since crypto regulations have
 You will earn stakes directly to your wallet each time you stake a block when you have staking activated. If you have several accounts in your wallet, keep in mind that you will only be staking *on the selected account* when you activate staking. All other outputs in other accounts will not be eligible for forging new blocks a.k.a. receiving stake rewards.
 
 ## 9. Wen exchange?
-We have already been listed on stex, which is a reputable exchange based in Estonia. As the project progresses we look forward to growing our community and being listed on bigger exchanges.
+We have already been listed on STEX, which is a reputable exchange based in Estonia. As the project progresses we look forward to growing our community and being listed on bigger exchanges.
 
 ## 10. What about [the fake stake attacks](https://medium.com/@dsl_uiuc/fake-stake-attacks-on-chain-based-proof-of-stake-cryptocurrencies-b8b05723f806) of POS coins?
 
