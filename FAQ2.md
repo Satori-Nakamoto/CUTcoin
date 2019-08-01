@@ -47,11 +47,15 @@ To bypass the main circuit output check, you can use a pin that is not yet verif
 So rest assured, we have researched this issue, tested our code and in our PoS code there is no such issues. [Our POS can be found here.](https://www.reddit.com/user/CUTcoin/comments/aumb8b/cutcoins_proof_of_stake_implementation/)
 
 ## 11. "Why did you decide to switch to PoS from PoW?" 
-"Just for the sake of ecology and prevention of 51% attack? Anyway, you probably know about the drawback of PoS i.e. richer get richer since they possess the most stakes. Don't you think it is something unfair though?" (Quote from D1f1c0lt)
+"Just for the sake of ecology and prevention of 51% attack? Anyway, you probably know about the drawback of PoS i.e. richer get richer since they possess the most stakes. Don't you think it is something unfair though?" (Question from D1f1c0lt)
 
 Sustainability against 51% attack itself is good enough prize to fight for, isn't it? If somebody (or some group) hols 51%+ of mining power that not only able to perform multiple spending but also can change blockchain history on their behalf. In PoS it is unlikely that a person that holds 51%+ of coins being on stake would try to perform malicious manipulations as it evolves in a dramatic decrease of the coin market price.
 
 In CUTcoin  PoS, the probability to obtain a reword is proportional to the number of coins being on stake, so it's not 'richer get richer' in the long term. In the short term, it's clear that the block forging is subject to change and those who put on a stake not much and still forge a block can easily double their CUTcoins.
  
+## 12. Does reward received from previous stake automatically consider for forging next block?
+No, the staking reward **and the output used to forge the block** must wait 800 blocks to mature.
 
+## 13. Must user stop staking in order to send? Will the wallet stop staking after sending funds?
+No, the user can send normally without stopping staking. When you send funds you create a transaction which, like all transactions, has inputs and outputs. Once this transaction is added to the blockchain 800 blocks must pass before these specific outputs start participation in forging. To make it more clear, let's look at how the process of staking is implemented in the wallet. Each time a new block appears, the wallet looks for unspent outputs from the opened account that can participate in staking and checks that they meet several conditions: the output amount must be >= 1CUT, the age in the blockchain is >= 800. So all outputs that meet these conditions automatically participate in staking (and it is reflected in the statistics updates), no additional actions required. Transaction change, like any other outputs, must wait for 800 blocks.
 
