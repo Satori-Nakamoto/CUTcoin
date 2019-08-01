@@ -2,7 +2,7 @@
 
 - Historic network difficulty chart
 - More memes
-
+- GitHub bot that shows GitHub activity in the discord
 
 
 
