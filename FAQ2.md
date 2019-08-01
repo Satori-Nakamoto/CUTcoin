@@ -9,7 +9,7 @@ Yes, there was a premine of 2% (4M coins). 9.3% of the coins were minted during 
 for the PoS era, or 179 493 589 CUT. About 300 CUT are minted every 2 minutes, and after total supply of 200M is reached, tail emission of 0.6 CUT per block will begin.
 
 ## 4. Was it you guys that found and responsibly disclosed that vulnerability in Monero?
-Why yes, [yes it was.](https://cutcoin.org/newmonero)
+Why yes, [yes it was.](https://cutcoin.org/newmonero)See the [hackerone post here.](https://hackerone.com/reports/501585)
 
 ## 5. How does staking work?
 Here's [an explanation of it.](https://www.reddit.com/user/CUTcoin/comments/aumb8b/cutcoins_proof_of_stake_implementation/)
@@ -23,7 +23,7 @@ First of all, CUT coin is about anonymity. Second, since crypto regulations have
 ## 8. How I will receive stakes with PoS?
 You will earn stakes directly to your wallet each time you stake a block when you have staking activated. If you have several accounts in your wallet, keep in mind that you will only be staking *on the selected account* when you activate staking. All other outputs in other accounts will not be eligible for forging new blocks a.k.a. receiving stake rewards.
 
-## 9. Wen exchange?
+## 9. When exchange?
 We have already been listed on STEX, which is a reputable exchange based in Estonia. As the project progresses we look forward to growing our community and being listed on bigger exchanges.
 
 ## 10. What about [the fake stake attacks](https://medium.com/@dsl_uiuc/fake-stake-attacks-on-chain-based-proof-of-stake-cryptocurrencies-b8b05723f806) of POS coins?
