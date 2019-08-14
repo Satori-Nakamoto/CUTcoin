@@ -2,7 +2,7 @@
 CUTcoin means "Concealed Untraceable Transaction" Coin . It's a new anonymous cryptocurrency with PoS consensus. 
 
 ## 2. Is CUTcoin PoW or PoS?
-CUTcoin started out as a PoW coin that used CUTcoin's own hashing algorithm. On March 9th, 2019 at block 52 000, CUTcoin switched to PoS.
+CUTcoin started out as a PoW coin that used CUTcoin's own hashing algorithm. On March 7th, 2019 at block 52 000, CUTcoin switched to PoS.
 
 ## 3. Was there a premine?
 Yes, there was a premine of 2% (4M coins). 9.3% of the coins were minted during the PoW phase (18 506 411 CUT) which leaves 88.7%
