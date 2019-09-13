@@ -13,6 +13,9 @@ and flash it onto the SD card. Now boot up, and make sure the system is up to da
     sudo apt-get upgrade
     
 This will take a long time.
+
+Since Raspberry Pis all have MAC addresses starting with `b8:27:eb`, it will protect our privacy even more to spoof the address. This can be done easily in Ubuntu mate by going to Network Connections -> Edit Connections -> Settings and setting "Cloned MAC address" to random.
+
 Next we will increase the size of the swap file so we can build CUTcoin. An explanation of the steps can be [found here](https://askubuntu.com/questions/1075505/how-do-i-increase-swapfile-in-ubuntu-18-04), but here are the commands in
 order for those who want to get right to it:
 
