@@ -24,7 +24,7 @@ First of all, CUT coin is about anonymity. Second, since crypto regulations have
 You will earn stakes directly to your wallet each time you stake a block when you have staking activated. If you have several accounts in your wallet, keep in mind that you will only be staking *on the selected account* when you activate staking. All other outputs in other accounts will not be eligible for forging new blocks a.k.a. receiving stake rewards.
 
 ## 9. When exchange?
-We are currently listed on STEX and CREX24. As the project progresses we look forward to growing our community and being listed on bigger exchanges.
+We are currently listed on STEX, CREX24, p2pb2b and bitalong. As the project progresses we look forward to growing our community and being listed on more exchanges.
 
 ## 10. What about [the fake stake attacks](https://medium.com/@dsl_uiuc/fake-stake-attacks-on-chain-based-proof-of-stake-cryptocurrencies-b8b05723f806) of POS coins?
 
@@ -59,12 +59,16 @@ No, the staking reward **and the output used to forge the block** must wait 800 
 ## 13. Must user stop staking in order to send? Will the wallet stop staking after sending funds?
 No, the user can send normally without stopping staking. When you send funds you create a transaction which, like all transactions, has inputs and outputs. Once this transaction is added to the blockchain 800 blocks must pass before these specific outputs start participation in forging. To make it more clear, let's look at how the process of staking is implemented in the wallet. Each time a new block appears, the wallet looks for unspent outputs from the opened account that can participate in staking and checks that they meet several conditions: the output amount must be >= 1CUT, the age in the blockchain is >= 800. So all outputs that meet these conditions automatically participate in staking (and it is reflected in the statistics updates), no additional actions required. Transaction change, like any other outputs, must wait for 800 blocks.
 
-## 14. Help! I can't find my coins!
+## 14. Help! I lost my coins!
 
 Before you start (or continue) to panic, check these common mistakes:
-
 - Is your wallet fully synched?
   - Wallets must be fully synched (100%) to display the latest blockchain transactions.
+  - Side note: A wallet can't send unless it's connected to a fully synchronized daemon.
 - Does the creation height of your wallet preceed the first transaction of that wallet?
   - If you are importing a wallet, make sure that the "wallet creation height" is less than the blockchain height of your first transaction. For example, if your first transaction is on block 201538 then your wallet creation height should be set to < 201538, for example 201000.
-  
+- Check if the transaction shows on the blockchain. If it does, then the coins are in the right place and the problem is with the wallet or exchange. This is how you [use the block explorer.](https://www.reddit.com/r/cutc0in/comments/dmjsm3/cli_guides_using_the_block_explorer/) note: the guide is written for the CLI wallet. With GUI wallet it's more simple. 
+- "I sent coins to / from exchange and now they vanished!"
+  - This is a problem with the exchange, not with the CUT network or wallet. Some exchanges have a delay before they even show a deposit as "incoming". Sometimes this delay is quite long, like with CREX24 for example. It's the same with withdrawals. Use the block explorer to verify that the coins are where they should be, and have some patience.
+- Withdrawal from official staking pool is not going through / taking forever.
+  - The way the staking pool is structured causes withdrawals to take a while. Firstly, for security reasons, all the coins are not held in the hot wallet. The majority of coins staking are on a secret server that only the pool admins know about. Although it slows down withdrawals, this is a **must** for security. Secondly, the pool's algorithm allows deposited coins to begin staking instantly instead of having to wait 800 blocks for coins to mature. Due to this same algorithm, withdrawals suffer a slight delay, but nowhere near 800 blocks (don't worry). Thirdly, if there are a lot of withdrawals at the same time then it will cause a traffic jam in the pool's wallet, since the change from each output needs to wait 10 blocks to become spendable.
