@@ -59,3 +59,12 @@ No, the staking reward **and the output used to forge the block** must wait 800 
 ## 13. Must user stop staking in order to send? Will the wallet stop staking after sending funds?
 No, the user can send normally without stopping staking. When you send funds you create a transaction which, like all transactions, has inputs and outputs. Once this transaction is added to the blockchain 800 blocks must pass before these specific outputs start participation in forging. To make it more clear, let's look at how the process of staking is implemented in the wallet. Each time a new block appears, the wallet looks for unspent outputs from the opened account that can participate in staking and checks that they meet several conditions: the output amount must be >= 1CUT, the age in the blockchain is >= 800. So all outputs that meet these conditions automatically participate in staking (and it is reflected in the statistics updates), no additional actions required. Transaction change, like any other outputs, must wait for 800 blocks.
 
+## 14. Help! I can't find my coins!
+
+Before you start (or continue) to panic, check these common mistakes:
+
+- Is your wallet fully synched?
+  - Wallets must be fully synched (100%) to display the latest blockchain transactions.
+- Does the creation height of your wallet preceed the first transaction of that wallet?
+  - If you are importing a wallet, make sure that the "wallet creation height" is less than the blockchain height of your first transaction. For example, if your first transaction is on block 201538 then your wallet creation height should be set to < 201538, for example 201000.
+  
