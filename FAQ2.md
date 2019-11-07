@@ -6,7 +6,7 @@ CUTcoin started out as a PoW coin that used CUTcoin's own hashing algorithm. On 
 
 ## 3. Was there a premine?
 Yes, there was a premine of 2% (4M coins). 9.3% of the coins were minted during the PoW phase (18 506 411 CUT) which leaves 88.7%
-for the PoS era, or 179 493 589 CUT. About 300 CUT are minted every 2 minutes, and after total supply of 200M is reached, tail emission of 0.6 CUT per block will begin.
+for the PoS era, or 179 493 589 CUT. About 250 CUT are minted every 2 minutes, and after total supply of 200M is reached, tail emission of 0.6 CUT per block will begin.
 
 ## 4. Was it you guys that found and responsibly disclosed that vulnerability in Monero?
 Why yes, [yes it was.](https://cutcoin.org/newmonero)See the [hackerone post here.](https://hackerone.com/reports/501585)
