@@ -61,7 +61,7 @@ and you will notice that now all 3 parties have the same wallet address:
 
 After our multisig wallet has some funds on it, let’s spend them. Upon receiving funds, the wallet will show the message
 
-(Some owned outputs have partial key images - import_multisig_info needed)
+    (Some owned outputs have partial key images - import_multisig_info needed)
 
 If the input is received while the wallet is open, it will look like this
 
@@ -73,45 +73,52 @@ and should it receive an input while closed, the next time the wallet is opened 
 
 To proceed to spending, we first need to exchange multisig info with our friends. Since this is a 2/3 multisig wallet, we need the info from 1 friend to complete a transaction. Alternatively, we could get the info from both friends and decide later which info to sign with. First we’ll export our multisig info by using the command export_multisig_info and any file name, like:
 
-export_multisig_info multis1
+    export_multisig_info multis1
+
+![s3](https://github.com/Satori-Nakamoto/images/blob/master/s3.png)
 
 The exported file will be in the same folder as your wallets, in this case /home/cut/cutcoin/build/Linux/master/release/bin. We need to send this to our 2 friends so they can sign a transaction, and they need to send their exported multisig info to us.
 
 Now we’ll import our friends’ multisig info files. By default, the wallet will look in the shell working folder for the files (that was /home/cut/cutcoin/build/Linux/master/release/bin in this case, but can vary if you have an advanced setup), so make sure the files are there. The file “multis 2” should be in friend #2’s wallet folder since he exported it there, same for “multis 3”. After we have all 3 multisig info files, we use the import_multisig_info command:
 
-import_multisig_info multis2 multis3
+    import_multisig_info multis2 multis3
 
-The output will tell us the balance our multisig wallet has to work with, and that multisig info was imported. See the photo below for reference.
+![s4](https://github.com/Satori-Nakamoto/images/blob/master/s4.png)
+
+The output will tell us the balance our multisig wallet has to work with, and that multisig info was imported. See the photo above for reference.
 
 Now let’s spend!
 
 Any of the 3 friends can start the transaction, and will need to get the signature from 1 of the other 2 friends. Start the transaction as usual
 
-transfer ctsFE4koe1VjaM5qm6GNGd7oCT26j5xAtMgDopVFV7NCKFhAV8Be5SXXaiLD1v9RD3RDrvnbSGdS26Rjw4tYFu1r3SjE9Qoxuf 1
+    transfer ctsFE4koe1VjaM5qm6GNGd7oCT26j5xAtMgDopVFV7NCKFhAV8Be5SXXaiLD1v9RD3RDrvnbSGdS26Rjw4tYFu1r3SjE9Qoxuf 1
 
+![s5](https://github.com/Satori-Nakamoto/images/blob/master/s5.png)
 
 This will generate a file called multisig_monero_tx in your shell working folder, the same folder mentioned earlier. For peace of mind, let’s do one transaction at a time. Let’s choose friend #2 to complete the signature for this transaction. If we choose a friend that we did not import the multisig file info from, we will get the error
 
-Error: Failed to sign multisig transaction: Final signed transaction not found: this transaction was likely made without our export data, so we cannot sign it
+    Error: Failed to sign multisig transaction: Final signed transaction not found: this transaction was likely made without our export data, so we cannot sign it
 
 Also, if our friend will send the transaction, he needs to have our file multisig_monero_tx in his shell working folder and then he can use sign_multisig with the file multisig_monero_tx. Whoever will send the transaction will do
 
-sign_multisig multisig_monero_tx
+    sign_multisig multisig_monero_tx
+
+![s7](https://github.com/Satori-Nakamoto/images/blob/master/s7.png)
 
 After verifying the address, amount, fees, ring size, and change address, our friend will press y and the transaction will be successfully signed to the file multisig_monero_tx. Now the transaction is ready to be relayed to the network. Our friend can send the file back to us or broadcast it himself by doing:
 
-submit_multisig multisig_monero_tx
+    submit_multisig multisig_monero_tx
 
+![s8](https://github.com/Satori-Nakamoto/images/blob/master/s8.png)
 
 Congratulations, transaction successfully submitted!
 
 To recap, the sending process went like:
 
-    At least 2 friends export_multisig_info and share their file with the other one (or both).
-    The other friend (or both) uses import_multisig_info with at least 1 other multisig info file.
-    Any of the friends with imported multisig info can start the transaction using the normal transfer command and generate a file called “multisig_monero_tx”, which should be sent to at least 1 other friend for signing.
-    At least 1 of the other 2 friends needs to sign this file by doing sign_multisig multisig_monero_tx on the file
-    The signed file is submitted to the network with submit_multisig multisig_monero_tx
+- At least 2 friends export_multisig_info and share their file with the other one (or both).
+- The other friend (or both) uses import_multisig_info with at least 1 other multisig info file.
+- Any of the friends with imported multisig info can start the transaction using the normal transfer command and generate a file called “multisig_monero_tx”, which should be sent to at least 1 other friend for signing.
+- At least 1 of the other 2 friends needs to sign this file by doing sign_multisig multisig_monero_tx on the file
+- The signed file is submitted to the network with submit_multisig multisig_monero_tx
 
 If the friends want to send another transaction, they should go back to step 1 and start the process again. If you don’t delete the file multisig_monero_tx it will just be overwritten next time a multisig transaction is created.
-
