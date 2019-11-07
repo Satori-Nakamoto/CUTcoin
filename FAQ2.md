@@ -67,7 +67,7 @@ Before you start (or continue) to panic, check these common mistakes:
   - Side note: A wallet can't send unless it's connected to a fully synchronized daemon.
 - Does the creation height of your wallet preceed the first transaction of that wallet?
   - If you are importing a wallet, make sure that the "wallet creation height" is less than the blockchain height of your first transaction. For example, if your first transaction is on block 201538 then your wallet creation height should be set to < 201538, for example 201000.
-- Check if the transaction shows on the blockchain. If it does, then the coins are in the right place and the problem is with the wallet or exchange. This is how you [use the block explorer.](https://www.reddit.com/r/cutc0in/comments/dmjsm3/cli_guides_using_the_block_explorer/) note: the guide is written for the CLI wallet. With GUI wallet it's more simple. 
+- Check if the transaction shows on the blockchain. If it does, then the coins are in the right place and the problem is with the wallet or exchange. This is how you [use the block explorer.](https://www.reddit.com/r/cutc0in/comments/dmjsm3/cli_guides_using_the_block_explorer/) Note: the guide is written for the CLI wallet. With GUI wallet it's more simple. 
 - "I sent coins to / from exchange and now they vanished!"
   - This is a problem with the exchange, not with the CUT network or wallet. Some exchanges have a delay before they even show a deposit as "incoming". Sometimes this delay is quite long, like with CREX24 for example. It's the same with withdrawals. Use the block explorer to verify that the coins are where they should be, and have some patience.
 - Withdrawal from official staking pool is not going through / taking forever.
