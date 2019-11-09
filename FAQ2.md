@@ -1,3 +1,6 @@
+TEST FILE 
+
+
 ## 1. What is CUTcoin?
 CUTcoin means "Concealed Untraceable Transaction" Coin . It's a new anonymous cryptocurrency with PoS consensus. 
 
