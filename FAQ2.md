@@ -73,7 +73,7 @@ Before you start (or continue) to panic, check these common mistakes:
 - Withdrawal from official staking pool is not going through / taking forever.
   - Firstly, for security reasons, all the coins are not held in the hot wallet. The majority of coins staking are on a secret server that only the pool admins know about. Although it slows down withdrawals, this is a **must** for security. Secondly, due to the pool's algorithm, withdrawals suffer a slight delay- all withdrawal requests are stored in a queue, with a strict order of execution, and the pool has a limited amount of coins to withdraw at given time, which brings us to the third point: if there are a lot of withdrawals at the same time then it will cause a traffic jam in the pool's wallet. Another thing that affects this is that the change from each output needs to wait 10 blocks to become spendable. Large withdrawals will take a long time, and please keep in mind that the staking pool is primarily meant for stakers with a small amount that want to eliminate low probability risk. It will always be more profitable to stake on your own, as long as you have a stable device with a stable internet connection.
 
-  ## 15. "invalid secret key length" during login on web wallet using secret keys from a paper wallet.
+## 15. "invalid secret key length" during login on web wallet using secret keys from a paper wallet.
  - Check the Cutcoin wallet address and secret keys pasted in WEBwallet. A direct copy-paste of wallet address and secret keys from paper wallet has space in them. Those spaces must be removed before pasting them in the web wallet.
  - An alternative is to restore the wallet using secret keys in CLI wallet using the following command.
    - Windows:		cutcoin-wallet-cli.exe --generate-from-keys New_Wallet_Name
@@ -81,3 +81,7 @@ Before you start (or continue) to panic, check these common mistakes:
    - Next, you'll be asked for the Address, the spend key, the view key, and finally the new password for the re-generated wallet.
    Running this with the correct parameters will re-generate your wallet files for you and allow you to set a new password.
    - Note: You do NOT need your password to restore a wallet from keys.
+
+## 16. When staking in the GUI wallet, the wallet locks after a short time. Am I still staking?
+Yes you are still staking. The wallet locks in order to protect your personal data.
+
