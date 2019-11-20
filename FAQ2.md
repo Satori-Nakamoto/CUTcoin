@@ -83,5 +83,5 @@ Before you start (or continue) to panic, check these common mistakes:
    - Note: You do NOT need your password to restore a wallet from keys.
 
 ## 16. When staking in the GUI wallet, the wallet locks after a short time. Am I still staking?
-Yes you are still staking. The wallet locks in order to protect your personal data.
+Yes, you are still staking. The wallet locks in order to protect your personal data.
 
