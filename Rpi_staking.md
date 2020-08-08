@@ -71,7 +71,7 @@ and sending coins to the new address. For example, if I have 1321 CUT then I wou
  
     transfer address_1 1000 address_2 100 address_3 100 address_4 100 address_5 10 address_6 10 address_7 1
  
-An in depth CLI wallet guide can be [found here](https://github.com/masari-project/Masari-Marketing/blob/master/Tutorials/CLI-wallet/CLI-wallet-guide.md).
+An in depth CLI wallet guide can be [found here](https://github.com/Satori-Nakamoto/simplewallet-guide/blob/master/guide.md).
 
 Now we have to wait those 800 blocks, and then we can start staking with 
 
