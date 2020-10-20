@@ -38,11 +38,15 @@ And then we will build the libgtest-dev library binary with
 
     sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cmake . && sudo make && sudo mv libg* /usr/lib/
     
-After we return to the home folder with
+As a patch to build v3, we will need to do
+
+    sudo wget -O /usr/include/zmq.hpp https://raw.githubusercontent.com/zeromq/cppzmq/master/zmq.hpp
+    
+Now we can return to the home folder with
 
     cd ~
     
-we are finally ready to clone the repository and build CUTcoin!
+and we are finally ready to clone the repository and build CUTcoin!
 
     git clone --recursive https://github.com/cutcoin/cutcoin
     cd cutcoin
